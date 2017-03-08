@@ -1,0 +1,28 @@
+{
+	"name": "web-assessment",
+	"version": "0.1.0",
+	"script": {
+		"start": "npm prune && npm install && gulp"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sushmagow/web-assessment.git"
+	},
+	"devDependencies": {
+		"gulp": "^3.9.1",
+		"gulp-sass": "3.1.0",
+		"gulp-copy": "0.0.2",
+		"gulp-load-plugins": "",
+		"gulp-clean-css": "3.0.3",
+		"gulp-rename": "1.2.2",
+		"gulp-minify": "0.0.15",
+		"run-sequence": "^1.0.2",
+		"jquery": "^1.x"
+	},
+	"dependencies": {
+		"lodash-compat": "^3.9.1",
+		"hbs": "~2.7.0",
+		"ractive": "^0.7.3",
+		"foundation-sites": "zurb/bower-foundation.git#5.5.2"
+	}
+}
