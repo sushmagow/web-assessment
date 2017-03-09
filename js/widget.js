@@ -20,12 +20,10 @@ define([
 					complete:  function () {
 						var productList = this.get('productList');
 						this.set('productDetails', productList[0]);
-						this.set('nthElement', 0);
 					},
 					onClick: function (i) {
 						var productList = this.get('productList');
 						this.set('productDetails', productList[i]);
-						this.set('nthElement', i);
 						window.scrollTo(0,0);
 					},
 					onMouseOver: function (i) {
@@ -34,16 +32,13 @@ define([
 						this.set('productDetails', productList[i]);
 						this.set('nthElement', i);*/
 					},
-					computed: {
-						shortDescription: function(brand, description) {
-							return 'desp';
-						}
+					addToCart: function () {
+						var productDetails = this.get('productDetails'),
+					 		price = productDetails.networkPrice;
+					 	alert('Price of the item '+ price);
+					 	console.log('Price of the item', price);
 					}
 					
-				});
-
-				ractive.on('addToCart', function (event) {
-					alert('add To Cart', ractive.get('nthElement'));
 				});
 			}
 		};
