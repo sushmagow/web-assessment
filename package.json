@@ -1,8 +1,10 @@
 {
 	"name": "web-assessment",
 	"version": "0.1.0",
-	"script": {
-		"start": "npm prune && npm install && gulp"
+	"scripts": {
+		"lite": "lite-server",
+		"gulp": "gulp",
+		"start": "npm install && gulp && npm run lite "
 	},
 	"repository": {
 		"type": "git",
@@ -17,12 +19,14 @@
 		"gulp-rename": "1.2.2",
 		"gulp-minify": "0.0.15",
 		"run-sequence": "^1.0.2",
-		"jquery": "^1.x"
+		"jquery": "^1.x",
+		"lite-server": "^2.1.0"
 	},
 	"dependencies": {
 		"lodash-compat": "^3.9.1",
 		"hbs": "~2.7.0",
 		"ractive": "^0.7.3",
+		"requirejs": "^2.1.17",
 		"foundation-sites": "zurb/bower-foundation.git#5.5.2"
 	}
 }
