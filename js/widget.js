@@ -19,6 +19,13 @@ define([
 					},
 					complete:  function () {
 						var productList = this.get('productList');
+						var shortDescription = function (brand, description) {
+							var desp = brand + description;
+								desp = desp.substring(0, 40);
+								desp = desp + '...';
+							return desp;
+						};
+						this.set('shortDescription', shortDescription);
 						this.set('productDetails', productList[0]);
 					},
 					onClick: function (i) {
@@ -38,10 +45,7 @@ define([
 					 	alert('Price of the item '+ price);
 					 	console.log('Price of the item', price);
 					}
-					
 				});
 			}
 		};
-
-
 	});
