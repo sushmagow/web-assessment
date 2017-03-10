@@ -1,0 +1,24 @@
+<div class='row main-class'>
+	<div class='column small-12 medium-6 large-3 image'>
+		<img alt='{{productDetails.brand}}' src='{{productDetails.imageUrls.lg}}' >
+	</div>
+	<div class='column small-12 medium-6 large-6'>
+		<h1 class='title'>{{productDetails.brand}} {{productDetails.description}}</h1>
+			<ul>
+			{{#productDetails.marketingBullets}}
+				<li>{{.}}</li>
+			{{/productDetails.marketingBullets}}
+			</ul>
+	</div>
+	<div class='column small-12 medium-6 large-3'>
+		<p class='price'>${{productDetails.networkPrice}}</p>
+		<button on-click='addToCart()' class='add-to-cart'>add to cart</button>
+	</div>
+</div>
+<div class='row'>
+	{{#productList: i}}
+		<div class='column small-12 medium-6 large-3'>
+			{{>productInfo}}
+		</div>
+	{{/productList}}
+<div>

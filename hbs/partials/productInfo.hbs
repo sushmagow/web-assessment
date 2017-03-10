@@ -1,0 +1,17 @@
+<div class='row product-info' on-click='onClick(i)' on-mouseover='onMouseOver(i)'>
+
+	<div class='column small-4 medium-12 large-12 image'>
+	<img src='{{imageUrls.md}}' alt='{{brand}}'>
+	</div>
+	<div class='column small-8 medium-12 large-12'>
+	<p class='description'>
+		{{brand}} {{description}}
+	</p>
+	<p class='price'>
+		${{networkPrice}}
+	</p>
+
+	<button on-click='onClick(i)' on-mouseover='onMouseOver(i)' class='view-more'>
+		view more
+	</button>
+</div>
